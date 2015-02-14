@@ -57,8 +57,8 @@ alias cp="cp -i"         # Prompt before overwriting files via cp
 alias mv="mv -i"         # Prompt before overwriting files via mv
 
 # Create aliases for commonly used commands.
-alias ls="ls -aG" #--color=tty"
-alias ll="ls -alh" #--color=tty"
+alias ls="ls -aLG" #--color=tty"
+alias ll="ls -alLh" #--color=tty"
 alias emacs="emacs -nw"
 
 # Make the sort program behave in the traditional way.
