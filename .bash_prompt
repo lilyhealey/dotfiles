@@ -1,0 +1,36 @@
+# set the shell prompt
+# see the bash man page for a description of special characters.
+
+export TERM=xterm-color
+
+# colours
+reset="\e[0m";
+black="\e[30m";
+red="\e[31m";
+green="\e[32m";
+yellow="\e[33m";
+blue="\e[34m";
+purple="\e[35m";
+cyan="\e[36m"; # reserved for orange
+ltgray="\e[37m";
+dkgray="\e[90m";
+bred="\e[91m";
+bgreen="\e[92m";
+byellow="\e[93m";
+bblue="\e[94m";
+bpurple="\e[95m";
+bcyan="\e[96m"; # reserved for orange
+white="\e[97m";
+
+# date-time 
+lt="\D{%H:%M}";
+st="\t";
+ldt="\D{%d %b %Y}";
+sdt="\D{$F}";
+wday="\D{%a}";
+
+PS1="\[${green}\]\#. ";
+# PS1+="\[${bcyan}\]${wday} ";
+PS1+="\[${bgreen}\]\W";
+PS1+="\[${reset}\] ";
+export PS1;

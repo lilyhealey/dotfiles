@@ -1,0 +1,20 @@
+# prompt before removing files via rm
+alias rm="rm -i"
+# prompt before overwriting files via cp
+alias cp="cp -i"
+# prompt before overwriting files via mv
+alias mv="mv -i"
+
+# shortcuts
+
+# Create aliases for commonly used commands.
+alias ls="ls -aG" #--color=tty"
+alias ll="ls -alLh" #--color=tty"
+alias emacs="emacs -nw"
+
+# Stopwatch
+alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
+
+# Ring the terminal bell, and put a badge on Terminal.app’s Dock icon
+# (useful when executing time-consuming commands)
+alias badge="tput bel"
