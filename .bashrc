@@ -30,7 +30,7 @@ umask 077
 # 9 executable with setgid bit set
 # 10 directory writeable to others, with sticky bit
 # 11 directory writeable to others, without sticky bit
-export LSCOLORS=ExhxCxcxbxdxDxfxFxgxGx
+export LSCOLORS=ExdxCxcxbxdxDxfxFxgxGx
 
 # set the terminal type so applications (e.g. emacs) use color
 export TERM=xterm-color
@@ -57,7 +57,7 @@ alias cp="cp -i"         # Prompt before overwriting files via cp
 alias mv="mv -i"         # Prompt before overwriting files via mv
 
 # Create aliases for commonly used commands.
-alias ls="ls -aLG" #--color=tty"
+alias ls="ls -aG" #--color=tty"
 alias ll="ls -alLh" #--color=tty"
 alias emacs="emacs -nw"
 
