@@ -1,7 +1,8 @@
+#----------------------
 # set the shell prompt
-# see the bash man page for a description of special characters.
+#----------------------
 
-export TERM=xterm-color
+# see the bash man page for a description of special characters.
 
 # colours
 reset="\e[0m";
