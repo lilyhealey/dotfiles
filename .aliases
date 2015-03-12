@@ -1,3 +1,7 @@
+# ---------------------------------------
+# establish a safe computing environment
+# ---------------------------------------
+
 # prompt before removing files via rm
 alias rm="rm -i"
 # prompt before overwriting files via cp
@@ -5,16 +9,41 @@ alias cp="cp -i"
 # prompt before overwriting files via mv
 alias mv="mv -i"
 
-# shortcuts
+# -----------------
+# ls is important
+# -----------------
 
-# Create aliases for commonly used commands.
+# show all
+# use colorised output
 alias ls="ls -aG" #--color=tty"
-alias ll="ls -alLh" #--color=tty"
-alias emacs="emacs -nw"
+# long format
+# follow symbolic links
+# use unit suffixes: B, K, M, G, T
+alias l="ls -lLh"
+# long format
+# '/' after directories
+# '*' after executables
+# '@' after symbolic links
+# '=' after sockets
+# '%' after whiteouts
+# '|' after FIFO
+# use unit suffixes
+alias ll="ls -lFh"
 
-# Stopwatch
+# ----------------
+# utilities
+# ----------------
+
+# stopwatch
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 
-# Ring the terminal bell, and put a badge on Terminal.app’s Dock icon
+# ring the terminal bell, and put a badge on Terminal.app’s dock icon
 # (useful when executing time-consuming commands)
 alias badge="tput bel"
+
+# ------------------
+# miscellaneous
+# ------------------
+
+# force emacs to open non-interactively
+alias emacs="emacs -nw"

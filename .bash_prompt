@@ -30,8 +30,8 @@ ldt="\D{%d %b %Y}";
 sdt="\D{$F}";
 wday="\D{%a}";
 
-PS1="\[${green}\]\#. ";
+PS1="\[${cyan}\]\#. ";
 # PS1+="\[${bcyan}\]${wday} ";
-PS1+="\[${bgreen}\]\W";
+PS1+="\[${bcyan}\]\W";
 PS1+="\[${reset}\] ";
 export PS1;
