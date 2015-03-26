@@ -23,15 +23,15 @@ bpurple="\e[95m";
 bcyan="\e[96m"; # reserved for orange
 white="\e[97m";
 
-# date-time 
+# date-time
 lt="\D{%H:%M}";
 st="\t";
 ldt="\D{%d %b %Y}";
 sdt="\D{$F}";
 wday="\D{%a}";
 
-PS1="\[${cyan}\]\#. ";
-# PS1+="\[${bcyan}\]${wday} ";
-PS1+="\[${bcyan}\]\W";
+PS1="\[${bgreen}\]\#. ";
+# PS1+="\[${green}\]${wday} ";
+PS1+="\[${green}\]\W";
 PS1+="\[${reset}\] ";
 export PS1;

@@ -11,6 +11,7 @@ fi
 
 # set the PATH environment variable
 export PATH=/bin:$PATH
+export PATH=/usr/local/mysql/bin:$PATH
 export PATH=$PATH:.
 
 # IS THIS WHY LATEX WAS SO UPSET AT ME?
