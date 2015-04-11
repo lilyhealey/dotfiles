@@ -160,7 +160,7 @@
 ;----------------------------------------------------------------------
 
 ; word wrap on word boundaries
-(global-visual-line-mode t)
+; (global-visual-line-mode t)
                                         ;---------------------------------------------------------------------
 ; disable the menubar
 (menu-bar-mode -1)
