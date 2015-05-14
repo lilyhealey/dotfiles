@@ -145,12 +145,12 @@
 ; Display characters in columns 72 and 73 using unusual background
 ; colors, thus making it easy to spot lines that are longer than 72
 ; characters.
-; (require 'column-marker)
-; (defun myMarkCol ()
-;    (interactive)
-;    (column-marker-1 72)
-;    (column-marker-2 71))
-; (add-hook 'font-lock-mode-hook 'myMarkCol)
+ (require 'column-marker)
+ (defun myMarkCol ()
+    (interactive)
+    (column-marker-1 72)
+    (column-marker-2 71))
+ (add-hook 'font-lock-mode-hook 'myMarkCol)
 
 ;-----------------------------------------------------------------------
 
@@ -161,6 +161,6 @@
 
 ; word wrap on word boundaries
 ; (global-visual-line-mode t)
-                                        ;---------------------------------------------------------------------
+;---------------------------------------------------------------------
 ; disable the menubar
 (menu-bar-mode -1)
