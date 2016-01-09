@@ -47,3 +47,5 @@ alias badge="tput bel"
 
 # force emacs to open non-interactively
 alias emacs="emacs -nw"
+
+alias date="date +'%a, %d %b %Y %T %Z' | perl -ne 'print lc'"

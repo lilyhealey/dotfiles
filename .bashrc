@@ -12,11 +12,12 @@ fi
 # set the PATH environment variable
 export PATH=/bin:$PATH
 export PATH=/usr/local/mysql/bin:$PATH
+export PATH=/usr/local/mysql/support-files:$PATH
 export PATH=$PATH:.
 
 # IS THIS WHY LATEX WAS SO UPSET AT ME?
 # set the default permission for new files to rwx------.
-umask 077
+# umask 077
 
 # ---------------------------
 # set colours for ls
@@ -50,4 +51,4 @@ set -o ignoreeof
 set -o noclobber
 
 # Make the sort program behave in the traditional way.
-export LC_ALL=C
+# export LC_ALL=C

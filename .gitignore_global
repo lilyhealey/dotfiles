@@ -1,2 +1,8 @@
+# emacs backup files
 *~
+
+# indesign lock files
+*.idlk
+
+# stupid mac files
 .DS_Store
