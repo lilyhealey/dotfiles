@@ -97,38 +97,52 @@ RESET 0 # reset to "normal" color
 
 # numbers based on mac ls
 # 1. directory (bright blue)
-DIR 00;94;49 
+DIR 00;94;49
+
 # 2. symbolic link. (lt gray)
 # (If you set this to 'target' instead of a numerical value, 
 # the color is as for the file pointed to.)
-LINK 00;37;49
+LINK 00;33;49
+
 # 3. socket (bright green)
 SOCK 00;92;49
+
 # 4. pipe (green)
 FIFO 00;32;49
+
 # 5. executables (red)
 EXEC 00;31;49
+
 # 6. block device driver (yellow)
 BLK 00;33;49
+
 # 7. character device driver (bright yellow)
 CHR 00;93;49
+
 # 8. file that is setuid (u+s) (magenta)
 SETUID 00;35;49
+
 # 9. file that is setgid (g+s) (bright magenta)
 SETGID 00;95;49
+
 # 10. dir that is sticky and other-writable (+t,o+w) (cyan)
 STICKY_OTHER_WRITABLE 00;36;49
+
 # 11. dir that is other-writable (o+w) and not sticky (bright cyan)
 OTHER_WRITABLE 00;96;49
  
 # regular file with more than one link (red)
 MULTIHARDLINK 00;31;49
+
 # door
 DOOR 00;35;49
+
 # symlink to nonexistent file, or non-stat'able file
 ORPHAN 00;40;100
+
 # file with capability
 CAPABILITY 00;90;49
+
 # dir with the sticky bit set (+t) and not other-writable
 STICKY 00;37;49
 
@@ -141,11 +155,13 @@ STICKY 00;37;49
 #.com 01;32
 #.btm 01;32
 #.bat 01;32
+
 # Or if you want to colorize scripts even if they do not have the
 # executable bit actually set.
 #.sh 01;32
 #.csh 01;32
- # archives or compressed (bright red)
+
+# archives or compressed (bright red)
 .tar 01;31
 .tgz 01;31
 .arj 01;31
@@ -178,6 +194,7 @@ STICKY 00;37;49
 .cpio 01;31
 .7z 01;31
 .rz 01;31
+
 # image formats
 .jpg 01;35
 .jpeg 01;35
@@ -224,15 +241,18 @@ STICKY 00;37;49
 .yuv 01;35
 .cgm 01;35
 .emf 01;35
+
 # http://wiki.xiph.org/index.php/MIME_Types_and_File_Extensions
 .axv 01;35
 .anx 01;35
 .ogv 01;35
 .ogx 01;35
-# audio formats
+
+# audio formats (orange)
 .aac 00;36
 .au 00;36
 .flac 00;36
+.m4a 00;36
 .mid 00;36
 .midi 00;36
 .mka 00;36
@@ -241,8 +261,11 @@ STICKY 00;37;49
 .ogg 00;36
 .ra 00;36
 .wav 00;36
+
 # http://wiki.xiph.org/index.php/MIME_Types_and_File_Extensions
 .axa 00;36
 .oga 00;36
 .spx 00;36
 .xspf 00;36
+
+.DS_Store 00;93

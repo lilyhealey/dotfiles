@@ -16,6 +16,8 @@ alias mv="mv -i"
 # -----------------------------
 if [ -x /usr/local/bin/gdircolors ]; then
     test -r ~/.dircolors && eval "$(gdircolors -b ~/.dircolors)" || eval "$(gdircolors -b)"
+    # show all
+	# use colorised output
     alias ls='gls -a --color=auto'
     alias dir='gdir --color=auto'
     alias vdir='gvdir --color=auto'
@@ -23,20 +25,22 @@ if [ -x /usr/local/bin/gdircolors ]; then
     # alias grep='grep --color=auto'
     # alias fgrep='fgrep --color=auto'
     # alias egrep='egrep --color=auto'
+else
+	# long format
+	# follow symbolic links
+	# use unit suffixes: B, K, M, G, T
+	alias ls="ls -aG" #--color=tty"
 fi
 
 # -----------------
 # ls is important
 # -----------------
 
-# show all
-# use colorised output
-# alias ls="ls -aG" #--color=tty"
-
 # long format
 # follow symbolic links
 # use unit suffixes: B, K, M, G, T
 alias l="ls -lLh"
+
 # long format
 # '/' after directories
 # '*' after executables
