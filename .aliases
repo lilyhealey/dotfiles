@@ -18,7 +18,9 @@ if [ -x /usr/local/bin/gdircolors ]; then
     test -r ~/.dircolors && eval "$(gdircolors -b ~/.dircolors)" || eval "$(gdircolors -b)"
     # show all
 	# use colorised output
-    alias ls='gls -a --color=auto'
+	# formatting file timestamps:
+	# https://www.gnu.org/software/coreutils/manual/html_node/Formatting-file-timestamps.html
+    alias ls='gls -a --color=auto --time-style="+%d %b %H:%M"'
     alias dir='gdir --color=auto'
     alias vdir='gvdir --color=auto'
 
@@ -69,4 +71,5 @@ alias badge="tput bel"
 # force emacs to open non-interactively
 alias emacs="emacs -nw"
 
-alias date="date +'%a, %d %b %Y %T %Z' | perl -ne 'print lc'"
+# alias date="date +'%a, %d %b %Y %T %Z' | perl -ne 'print lc'"
+alias date="gdate -R"
