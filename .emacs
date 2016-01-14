@@ -161,6 +161,11 @@
 
 ; word wrap on word boundaries
 ; (global-visual-line-mode t)
+
 ;---------------------------------------------------------------------
 ; disable the menubar
 (menu-bar-mode -1)
+
+;---------------------------------------------------------------------
+; force hosts file to open in conf mode
+(add-to-list 'auto-mode-alist' ("hosts" . conf-mode))
