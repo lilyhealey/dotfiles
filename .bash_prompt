@@ -30,7 +30,12 @@ ldt="\D{%d %b %Y}";
 sdt="\D{$F}";
 wday="\D{%a}";
 
-PS1="\[${bpurple}\]\#. ";
+# other prompt things
+# \h	the hostname up to the first '.'
+# \H 	the hostname
+
+PS1="\[${bblue}\](\h) ";
+PS1+="\[${bpurple}\]\#. ";
 # PS1+="\[${bpurple}\]${ldt} ";
 PS1+="\[${red}\]\W";
 PS1+="\[${reset}\] ";

@@ -197,7 +197,9 @@ STICKY 00;37;49
 
 # image formats
 .jpg 01;35
+.JPG 01;35
 .jpeg 01;35
+.JPEG 01;35
 .gif 01;35
 .bmp 01;35
 .pbm 01;35
