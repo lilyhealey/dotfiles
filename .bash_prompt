@@ -34,8 +34,8 @@ wday="\D{%a}";
 # \h	the hostname up to the first '.'
 # \H 	the hostname
 
-PS1="\[${bblue}\](\h) ";
-PS1+="\[${bpurple}\]\#. ";
+PS1="\[${bpurple}\]\#. ";
+PS1+="\[${bblue}\](\h) ";
 # PS1+="\[${bpurple}\]${ldt} ";
 PS1+="\[${red}\]\W";
 PS1+="\[${reset}\] ";
