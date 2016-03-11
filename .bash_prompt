@@ -36,8 +36,10 @@ wday="\D{%a}";
 
 PS1="\[${ltgray}\]\#. ";
 PS1="\[${ltgray}\]${lt} ";
+
+# make sure the "SERVERNAME" variable is set
 if ! [ -z ${SERVERNAME+x} ]; then 
-	PS1+="\[${bblue}\]$SERVERNAME "; 
+	PS1+="\[$SERVERCOLOUR\]$SERVERNAME "; 
 fi
 # PS1="\[${bpurple}\]${sdt} ";
 PS1+="\[${bpurple}\]\W";
