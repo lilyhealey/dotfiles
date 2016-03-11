@@ -24,7 +24,7 @@ bcyan="\e[96m"; # reserved for orange
 white="\e[97m";
 
 # date-time
-lt="\D{%H:%M}";
+lt="\D{%a %H.%M}";
 st="\t";
 ldt="\D{%d %b %Y}";
 sdt="\D{%d %b}";
@@ -35,8 +35,10 @@ wday="\D{%a}";
 # \H 	the hostname
 
 PS1="\[${ltgray}\]\#. ";
-# PS1="\[${bpurple}\]${wday} ${sdt} ${lt} ";
-# PS1+="\[${bblue}\](\h) ";
+PS1="\[${ltgray}\]${lt} ";
+if ! [ -z ${SERVERNAME+x} ]; then 
+	PS1+="\[${bblue}\]$SERVERNAME "; 
+fi
 # PS1="\[${bpurple}\]${sdt} ";
 PS1+="\[${bpurple}\]\W";
 PS1+="\[${reset}\] ";

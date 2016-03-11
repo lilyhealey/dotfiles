@@ -10,11 +10,14 @@ if [ -f $CONFIGDIR/bash_profile-$ARCH ]; then
 fi
 
 # set the PATH environment variable
-export PATH=/bin:$PATH
-export PATH=/usr/local/bin:$PATH
+# export PATH=/bin:$PATH
+# export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/mysql/bin:$PATH
 export PATH=/usr/local/mysql/support-files:$PATH
 export PATH=$PATH:.
+
+# no vi ever please
+export EDITOR=emacs
 
 # IS THIS WHY LATEX WAS SO UPSET AT ME?
 # set the default permission for new files to rwx------.
