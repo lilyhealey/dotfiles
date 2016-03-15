@@ -35,7 +35,7 @@ wday="\D{%a}";
 # \H 	the hostname
 
 PS1="\[${ltgray}\]\#. ";
-PS1="\[${ltgray}\]${lt} ";
+PS1="\[${dkgray}\]${lt} ";
 
 # make sure the "SERVERNAME" variable is set
 if ! [ -z ${SERVERNAME+x} ]; then 
