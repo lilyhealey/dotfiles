@@ -81,14 +81,24 @@
 
 ;-----------------------------------------------------------------------
 
+; Indent using spaces instead of tabs, but not in makekfile-mode.
+(setq indent-tab-mode nil)
+(defun myIndentUsingTabs() (setq indent-tab-mode t))
+(add-hook 'makefile-mode-hook 'myIndentUsingTabs)
+
 ; Indent using spaces instead of tabs, but not in makefile-mode.
-(defun myIndentUsingSpaces () (setq indent-tabs-mode nil))
-(add-hook 'text-mode-hook 'myIndentUsingSpaces)
-(add-hook 'c-mode-hook 'myIndentUsingSpaces)
-(add-hook 'asm-mode-hook 'myIndentUsingSpaces)
-(add-hook 'java-mode-hook 'myIndentUsingSpaces)
-(add-hook 'python-mode-hook 'myIndentUsingSpaces)
-(add-hook 'emacs-lisp-mode-hook 'myIndentUsingSpaces)
+; (defun myIndentUsingSpaces () (setq indent-tabs-mode nil))
+; (add-hook 'text-mode-hook 'myIndentUsingSpaces)
+; (add-hook 'c-mode-hook 'myIndentUsingSpaces)
+; (add-hook 'asm-mode-hook 'myIndentUsingSpaces)
+; (add-hook 'java-mode-hook 'myIndentUsingSpaces)
+; (add-hook 'python-mode-hook 'myIndentUsingSpaces)
+; (add-hook 'emacs-lisp-mode-hook 'myIndentUsingSpaces)
+
+;-----------------------------------------------------------------------
+
+; Indent with 4 tabs
+(setq tab-width 4)
 
 ;-----------------------------------------------------------------------
 

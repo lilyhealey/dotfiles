@@ -20,7 +20,7 @@ if [ -x /usr/local/bin/gdircolors ]; then
 	# use colorised output
 	# formatting file timestamps:
 	# https://www.gnu.org/software/coreutils/manual/html_node/Formatting-file-timestamps.html
-    alias ls='gls -a --color=auto --time-style="+%d %b %H:%M"'
+    alias ls='gls -a --color=auto --quoting-style=literal --time-style="+%d %b %H:%M"'
     alias dir='gdir --color=auto'
     alias vdir='gvdir --color=auto'
 
