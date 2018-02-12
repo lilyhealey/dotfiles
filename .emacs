@@ -3,7 +3,7 @@
 ; Emacs executes this file whenever it is launched.
 ;=======================================================================
 
-(set-face-foreground 'font-lock-comment-face "Red" )
+(set-face-foreground 'font-lock-comment-face "#928374" )
 
 ; Create (or don't create) backup files.
 (setq-default make-backup-files t)

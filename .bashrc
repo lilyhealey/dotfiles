@@ -41,7 +41,7 @@ export EDITOR=emacs
 export LSCOLORS=ExdxCxcxbxdxDxfxFxgxGx
 
 # set the terminal type so applications (e.g. emacs) use color
-export TERM=xterm-color
+export TERM=xterm-256color
 
 # make the command line history ignore duplicate command lines.
 history_control=ignoredups
@@ -51,7 +51,7 @@ history_control=ignoredups
 # -----------------------------
 # Do not log out with <ctrl-d>
 set -o ignoreeof
-# Do not overwrite files via '>'        
+# Do not overwrite files via '>'
 set -o noclobber
 
 # Make the sort program behave in the traditional way.
