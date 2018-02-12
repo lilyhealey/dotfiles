@@ -23,6 +23,9 @@ export EDITOR=emacs
 # set the default permission for new files to rwx------.
 # umask 077
 
+# run gpg-agent or something
+export GPG_TTY=$(tty)
+
 # ---------------------------
 # set colours for ls
 # see ls man page for colours
@@ -56,4 +59,3 @@ set -o noclobber
 
 # Make the sort program behave in the traditional way.
 # export LC_ALL=C
-export GPG_TTY=$(tty)
