@@ -102,7 +102,7 @@ DIR 00;94;49
 # 2. symbolic link. (lt gray)
 # (If you set this to 'target' instead of a numerical value, 
 # the color is as for the file pointed to.)
-LINK 00;33;49
+LINK 00;93;49
 
 # 3. socket (bright green)
 SOCK 00;92;49
@@ -270,4 +270,4 @@ STICKY 00;37;49
 .spx 00;36
 .xspf 00;36
 
-.DS_Store 00;93
+.DS_Store 00;90

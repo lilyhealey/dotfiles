@@ -1,0 +1,25 @@
+# no vi ever please
+export EDITOR=emacs;
+
+# set the terminal type so applications (e.g. emacs) use color
+export TERM=xterm-256color;
+
+# ---------------------------
+# set colours for ls
+# see ls man page for colours
+# ---------------------------
+# 1 directory
+# 2 symbolic link
+# 3 socket
+# 4 pipe
+# 5 executable
+# 6 block special
+# 7 character special
+# 8 executable with setuid bit set
+# 9 executable with setgid bit set
+# 10 directory writeable to others, with sticky bit
+# 11 directory writeable to others, without sticky bit
+export LSCOLORS=ExdxCxcxbxdxDxfxFxgxGx;
+
+# run gpg-agent or something
+export GPG_TTY=$(tty);
