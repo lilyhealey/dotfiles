@@ -38,3 +38,6 @@ set -o noclobber
 
 # Make the sort program behave in the traditional way.
 # export LC_ALL=C
+
+bind '"\e[A":history-search-backward'
+bind '"\e[B":history-search-forward'

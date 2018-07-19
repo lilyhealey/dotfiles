@@ -20,7 +20,7 @@ if [ -x /usr/local/bin/gdircolors ]; then
 	# use colorised output
 	# formatting file timestamps:
 	# https://www.gnu.org/software/coreutils/manual/html_node/Formatting-file-timestamps.html
-    alias ls='gls -a --color=auto --quoting-style=literal --time-style="+%d %b %H:%M"'
+    alias ls='gls -a --color=auto --quoting-style=literal'
     alias dir='gdir --color=auto'
     alias vdir='gvdir --color=auto'
 
@@ -38,10 +38,12 @@ fi
 # ls is important
 # -----------------
 
+alias lsn='ls -L'
+
 # long format
 # follow symbolic links
 # use unit suffixes: B, K, M, G, T
-alias l="ls -lLh"
+alias l='ls -lLh --time-style="+%d %b %Y %H:%M"'
 
 # long format
 # '/' after directories
@@ -73,3 +75,5 @@ alias emacs="emacs -nw"
 
 # alias date="date +'%a, %d %b %Y %T %Z' | perl -ne 'print lc'"
 alias date="gdate -R"
+
+alias k4="/usr/bin/env osascript /Users/$USER/Dropbox/work/the-new-yorker/github/tny-automation-scripts/K4XML/K4_XML_CC14.applescript"

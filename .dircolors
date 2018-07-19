@@ -95,9 +95,12 @@ TERM xterm-debian
 #FILE 00 # regular file: use no color at all
 RESET 0 # reset to "normal" color
 
+# 0
+FILE 00;39;49
+
 # numbers based on mac ls
 # 1. directory (bright blue)
-DIR 00;94;49
+DIR 00;34;49
 
 # 2. symbolic link. (lt gray)
 # (If you set this to 'target' instead of a numerical value, 
@@ -111,7 +114,7 @@ SOCK 00;92;49
 FIFO 00;32;49
 
 # 5. executables (red)
-EXEC 00;31;49
+EXEC 00;36;49
 
 # 6. block device driver (yellow)
 BLK 00;33;49
@@ -196,53 +199,53 @@ STICKY 00;37;49
 .rz 01;31
 
 # image formats
-.jpg 01;35
-.JPG 01;35
-.jpeg 01;35
-.JPEG 01;35
-.gif 01;35
-.bmp 01;35
-.pbm 01;35
-.pgm 01;35
-.ppm 01;35
-.tga 01;35
-.xbm 01;35
-.xpm 01;35
-.tif 01;35
-.tiff 01;35
-.png 01;35
-.svg 01;35
-.svgz 01;35
-.mng 01;35
-.pcx 01;35
-.mov 01;35
-.mpg 01;35
-.mpeg 01;35
-.m2v 01;35
-.mkv 01;35
-.webm 01;35
-.ogm 01;35
-.mp4 01;35
-.m4v 01;35
-.mp4v 01;35
-.vob 01;35
-.qt 01;35
-.nuv 01;35
-.wmv 01;35
-.asf 01;35
-.rm 01;35
-.rmvb 01;35
-.flc 01;35
-.avi 01;35
-.fli 01;35
-.flv 01;35
-.gl 01;35
-.dl 01;35
-.xcf 01;35
-.xwd 01;35
-.yuv 01;35
-.cgm 01;35
-.emf 01;35
+.jpg 00;97
+.JPG 00;97
+.jpeg 00;97
+.JPEG 00;97
+.gif 00;97
+.bmp 00;97
+.pbm 00;97
+.pgm 00;97
+.ppm 00;97
+.tga 00;97
+.xbm 00;97
+.xpm 00;97
+.tif 00;97
+.tiff 00;97
+.png 00;97
+.svg 00;97
+.svgz 00;97
+.mng 00;97
+.pcx 00;97
+.mov 00;97
+.mpg 00;97
+.mpeg 00;97
+.m2v 00;97
+.mkv 00;97
+.webm 00;97
+.ogm 00;97
+.mp4 00;97
+.m4v 00;97
+.mp4v 00;97
+.vob 00;97
+.qt 00;97
+.nuv 00;97
+.wmv 00;97
+.asf 00;97
+.rm 00;97
+.rmvb 00;97
+.flc 00;97
+.avi 00;97
+.fli 00;97
+.flv 00;97
+.gl 00;97
+.dl 00;97
+.xcf 00;97
+.xwd 00;97
+.yuv 00;97
+.cgm 00;97
+.emf 00;97
 
 # http://wiki.xiph.org/index.php/MIME_Types_and_File_Extensions
 .axv 01;35

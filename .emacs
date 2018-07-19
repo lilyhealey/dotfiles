@@ -3,6 +3,13 @@
 ; Emacs executes this file whenever it is launched.
 ;=======================================================================
 
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (set-face-foreground 'font-lock-comment-face "#928374" )
 
 ; Create (or don't create) backup files.
@@ -97,8 +104,8 @@
 
 ;-----------------------------------------------------------------------
 
-; Indent with 4 tabs
-(setq tab-width 4)
+; Indent with 2 tabs
+(setq tab-width 2)
 
 ;-----------------------------------------------------------------------
 
@@ -158,8 +165,8 @@
  (require 'column-marker)
  (defun myMarkCol ()
     (interactive)
-    (column-marker-1 72)
-    (column-marker-2 71))
+    (column-marker-1 73)
+    (column-marker-2 72))
  (add-hook 'font-lock-mode-hook 'myMarkCol)
 
 ;-----------------------------------------------------------------------
@@ -176,6 +183,23 @@
 ; disable the menubar
 (menu-bar-mode -1)
 
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+
 ;---------------------------------------------------------------------
 ; force hosts file to open in conf mode
 (add-to-list 'auto-mode-alist' ("hosts" . conf-mode))
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("bf314d395510f0b05aaaf7ae903ff4a19c7483b7ebdf6075be46bf44190452f5" "21942ced4867835ccf5533992afa34eee4a54014291bc36b6af7a81a7b45b7bf" "b5278f7869ca537473490fd13d2fe3efdf853d9c924c9db7bb83856b28cc154a" "1dde5de73a8fdb69342f02bd6a48a7b9603faa01f34b6adfa1d463fd8fefafbc" "acbbada7d94a88d65ea7d73b5442f2687741ca580c2513828e1ef6876120fc6a" "011d4421eedbf1a871d1a1b3a4d61f4d0a2be516d4c94e111dfbdc121da0b043" default))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
