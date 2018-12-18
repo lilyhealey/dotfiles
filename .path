@@ -1,12 +1,6 @@
 # set the PATH environment variable
 
-# export PATH="/Users/$USER/Library/Python/3.6/bin:$PATH"
-# export PATH="/usr/local/lib/python2.7/site-packages:$PATH"
-# export PATH="/usr/local/opt/python/libexec/bin:$PATH"
-# export PATH="/usr/local/bin:$PATH"
-# export PATH="/bin:"
-
-export PATH="/Users/$USER/Library/Python/3.6/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/mysql/support-files:$PATH"
 export PATH="/usr/local/mysql/bin:$PATH"
 export PATH=".:$PATH"

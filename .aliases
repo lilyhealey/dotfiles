@@ -77,3 +77,7 @@ alias emacs="emacs -nw"
 alias date="gdate -R"
 
 alias k4="/usr/bin/env osascript /Users/$USER/Dropbox/work/the-new-yorker/github/tny-automation-scripts/K4XML/K4_XML_CC14.applescript"
+alias mnt="/Users/$USER/Library/LaunchAgents/mount-servers.js"
+
+# quick look a file
+alias qlf='qlmanage -p "$@" &> /dev/null'

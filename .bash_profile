@@ -2,10 +2,13 @@
 # bourne again shell init file
 # -----------------------------
 
-for file in ~/.{servername,path,bash_prompt,exports,aliases}; do
+# load all the other init files
+for file in ~/.{path,bash_prompt,exports,aliases,git-completion.bash}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
+
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
 # if [ -f ~/.bashrc ]; then
 # 	. ~/.bashrc;
@@ -25,8 +28,6 @@ fi
 
 # make the command line history ignore duplicate command lines.
 history_control=ignoredups
-
-source ~/.servername
 
 # -----------------------------
 # Establish a safe environment.
