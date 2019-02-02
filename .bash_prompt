@@ -2,8 +2,6 @@
 # set the shell prompt
 #----------------------
 
-# see the bash man page for a description of special characters.
-# colours
 reset="\e[0m";
 black="\e[30m";
 red="\e[31m";
@@ -22,6 +20,26 @@ bpurple="\e[95m";
 bcyan="\e[96m"; # reserved for orange
 white="\e[97m";
 
+# see the bash man page for a description of special characters.
+# colours
+ereset="\[\e[0m\]";
+eblack="\[\e[30m\]";
+ered="\[\e[31m\]";
+egreen="\[\e[32m\]";
+eyellow="\[\e[33m\]";
+eblue="\[\e[34m\]";
+epurple="\[\e[35m\]";
+ecyan="\[\e[36m\]"; # reserved for orange
+eltgray="\[\e[37m\]";
+edkgray="\[\e[90m\]";
+ebred="\[\e[91m\]";
+ebgreen="\[\e[92m\]";
+ebyellow="\[\e[93m\]";
+ebblue="\[\e[94m\]";
+ebpurple="\[\e[95m\]";
+ebcyan="\[\e[96m\]"; # reserved for orange
+ewhite="\[\e[97m\]";
+
 prompt_git() {
   local s='';
   local branchName='';
@@ -37,22 +55,30 @@ prompt_git() {
 
       # Check for uncommitted changes in the index.
       if ! $(git diff --quiet --ignore-submodules --cached); then
+        s+="${bgreen}";
         s+="+";
+        s+="${reset}";
       fi;
 
       # Check for unstaged changes.
       if ! $(git diff-files --quiet --ignore-submodules --); then
-        s+='!';
+        s+="${bred}";
+        s+="!";
+        s+="${reset}";
       fi;
 
       # Check for untracked files.
       if [ -n "$(git ls-files --others --exclude-standard)" ]; then
+        s+="${byellow}";
         s+='?';
+        s+="${reset}";
       fi;
 
       # Check for stashed files.
       if $(git rev-parse --verify refs/stash &>/dev/null); then
+        s+="${bblue}";
         s+='$';
+        s+="${reset}";
       fi;
 
     fi;
@@ -64,9 +90,9 @@ prompt_git() {
       git rev-parse --short HEAD 2> /dev/null || \
       echo '(unknown)')";
 
-    [ -n "${s}" ] && s=" [${s}]";
+    [ -n "${s}" ] && s="${dkgray}[${s}${dkgray}]${reset}";
 
-    echo -e "\n${1}${branchName}${2}${s}";
+    printf "\n${1}${branchName} ${s}\n";
     # printf "\n${1}${branchName}${s}"
   else
     return;
@@ -88,24 +114,29 @@ wday="\D{%a}";
 # $ 
 
 # \!  the history number of this command
-PS1="\[${bcyan}\]\!. ";
+# PS1="${edkgray}\!. ";
 
 # \u  the username of the current user
 # \h  the hostname up to the first `.'
-PS1+="\[${bgreen}\]\u@\h";
+PS1="${ebgreen}\u"
+
+PS1+="${egreen}@"
+
+PS1+="${ebgreen}\h";
 
 # plaintext colon
-PS1+="\[${reset}\]:";
+PS1+="${ereset}:";
 
 # \w  the current working directory; with $HOME abbreviated with a tilde
-PS1+="\[${byellow}\]\w";
+# \W  the basename of the current working directory; with $HOME abbreviated with a tilde
+PS1+="${eyellow}\W";
 
 # Git repository details
-PS1+="\$(prompt_git \"\[${white}\]on \[${ltgray}\]\" \"\[${red}\]\")";
+PS1+="\$(prompt_git \"${ereset}on ${eltgray}\" \"${ered}\")";
 # PS1+="\$(prompt_git \"\[${white}\]on \[${ltgray}\]\")";
 
 # a literal $
-PS1+="\[${reset}\]\n\$ ";
+PS1+="${ereset}\n\$ ";
 
 export PS1;
 
