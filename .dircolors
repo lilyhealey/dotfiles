@@ -71,10 +71,10 @@ TERM xterm-debian
 
 # Text color codes:
 # 39 = default fg
-# 30 = black	90 = dark gray
-# 31 = red		91 = bright red
-# 32 = green 	92 = bright green
-# 33 = yellow 	93 = bright yellow
+# 30 = black    90 = dark gray
+# 31 = red      91 = bright red
+# 32 = green    92 = bright green
+# 33 = yellow   93 = bright yellow
 # 34 = blue		94 = bright blue
 # 35 = magenta	95 = bright magenta
 # 36 = cyan		96 = bright cyan
@@ -105,7 +105,7 @@ DIR 00;34;49
 # 2. symbolic link. (yellow)
 # (If you set this to 'target' instead of a numerical value, 
 # the color is as for the file pointed to.)
-LINK 00;33;49
+LINK 00;93;49
 
 # 3. socket (bright green)
 SOCK 00;92;49

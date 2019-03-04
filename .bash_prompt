@@ -118,18 +118,18 @@ wday="\D{%a}";
 
 # \u  the username of the current user
 # \h  the hostname up to the first `.'
-PS1="${ebgreen}\u"
+PS1="${ebblue}\u"
 
-PS1+="${egreen}@"
+PS1+="${edkgray}@"
 
-PS1+="${ebgreen}\h";
+PS1+="${ecyan}\h";
 
 # plaintext colon
 PS1+="${ereset}:";
 
 # \w  the current working directory; with $HOME abbreviated with a tilde
 # \W  the basename of the current working directory; with $HOME abbreviated with a tilde
-PS1+="${eyellow}\W";
+PS1+="${ebgreen}\W";
 
 # Git repository details
 PS1+="\$(prompt_git \"${ereset}on ${eltgray}\" \"${ered}\")";
