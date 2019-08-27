@@ -1,6 +1,9 @@
 # no vi ever please
 export EDITOR=emacs;
 
+# for iTerm2?
+export CLICOLOR=1;
+
 # set the terminal type so applications (e.g. emacs) use color
 export TERM=xterm-256color;
 
@@ -23,6 +26,9 @@ export LSCOLORS=ExdxCxcxbxdxDxfxFxgxGx;
 
 # run gpg-agent or something
 export GPG_TTY=$(tty);
+
+# see the very end of man jq for details
+export JQ_COLORS="1;30:1;35:1;35:1;33:1;32:1;36:1;36"
 
 # export NVM_DIR="$HOME/.nvm"
 #   . "/usr/local/opt/nvm/nvm.sh"
