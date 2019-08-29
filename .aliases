@@ -1,6 +1,6 @@
-# ---------------------------------------
+# -----------------------------------------------------------------------------
 # establish a safe computing environment
-# ---------------------------------------
+# -----------------------------------------------------------------------------
 
 # prompt before removing files via rm
 alias rm="rm -i"
@@ -9,17 +9,22 @@ alias cp="cp -i"
 # prompt before overwriting files via mv
 alias mv="mv -i"
 
+# -----------------------------------------------------------------------------
+# handle ls
+# use gls if present, add useful aliases:
+# - lsn
+# - l
+# - ll
+# -----------------------------------------------------------------------------
 
-# -----------------------------
-# enable color support of ls and 
-# also add handy aliases
-# -----------------------------
 if [ -x /usr/local/bin/gdircolors ]; then
     test -r ~/.dircolors && eval "$(gdircolors -b ~/.dircolors)" || eval "$(gdircolors -b)"
-    # show all
-	# use colorised output
-	# formatting file timestamps:
-	# https://www.gnu.org/software/coreutils/manual/html_node/Formatting-file-timestamps.html
+
+    # -a = do not ignore entries starting with .
+    # --color[=WHEN] = colorize the output; WHEN can be:
+    #                   'always' (default if omitted), 
+    #                   'auto', or 
+    #                   'never'
     alias ls='gls -a --color=auto --quoting-style=literal'
     alias dir='gdir --color=auto'
     alias vdir='gvdir --color=auto'
@@ -28,36 +33,37 @@ if [ -x /usr/local/bin/gdircolors ]; then
     # alias fgrep='fgrep --color=auto'
     # alias egrep='egrep --color=auto'
 else
-	# long format
-	# follow symbolic links
-	# use unit suffixes: B, K, M, G, T
+    # -a = Include directory entries whose names begin with a dot (.).
+    # -G = Enable colorized output. This option is equivalent to defining
+    #      CLICOLOR in the environment. (See below.)
 	alias ls="ls -aG" #--color=tty"
 fi
 
-# -----------------
-# ls is important
-# -----------------
-
+# -L = when showing file information for a symbolic link, show information for
+# the file the link references rather than for the link itself
 alias lsn='ls -L'
 
-# long format
-# follow symbolic links
-# use unit suffixes: B, K, M, G, T
+# -l = use a long listing format
+# -L = follow symbolic links (see above)
+# -h = with -l and -s, print sizes like 1K 234M 2G etc.
+# formatting file timestamps:
+# https://www.gnu.org/software/coreutils/manual/html_node/Formatting-file-timestamps.html
 alias l='ls -lLh --time-style="+%d %b %Y %H:%M"'
 
-# long format
-# '/' after directories
-# '*' after executables
-# '@' after symbolic links
-# '=' after sockets
-# '%' after whiteouts
-# '|' after FIFO
-# use unit suffixes
-alias ll="ls -lFh"
+# -l = use a long listing format
+# -h = human-readable (see above)
+# -F = append indicator (one of */=>@|) to entries
+#      '*' after executables
+#      '/' after directories
+#      '=' after sockets
+#      '@' after symbolic links
+#      '|' after FIFO
+#      '%' after whiteouts (?)
+alias ll="ls -lhF"
 
-# ----------------
+# -----------------------------------------------------------------------------
 # utilities
-# ----------------
+# -----------------------------------------------------------------------------
 
 # stopwatch
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
@@ -66,9 +72,9 @@ alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date
 # (useful when executing time-consuming commands)
 alias badge="tput bel"
 
-# ------------------
+# -----------------------------------------------------------------------------
 # miscellaneous
-# ------------------
+# -----------------------------------------------------------------------------
 
 # force emacs to open non-interactively
 alias emacs="emacs -nw"

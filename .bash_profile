@@ -1,27 +1,31 @@
-# -----------------------------
+# -----------------------------------------------------------------------------
 # bourne again shell init file
-# -----------------------------
+# -----------------------------------------------------------------------------
 
 # load all the other init files
 for file in ~/.{path,bash_prompt,exports,aliases,git-completion.bash}; do
+  # -f file = true if file exists and is a regular file
+  # -r file = true if file exists and is readable
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
 
+
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
-# nvm stuff
+# -----------------------------------------------------------------------------
+# handle nvm
+# -----------------------------------------------------------------------------
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# load nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+# load nvm bash_completion
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" 
 
 
-# if [ -f ~/.bashrc ]; then
-# 	. ~/.bashrc;
-# fi
-# source ~/.bashrc
-
+# -----------------------------------------------------------------------------
 # do global configuration
+# -----------------------------------------------------------------------------
 ARCH=`uname -s`
 CONFIGDIR='/usr/operations/lib/userconfig'
 if [ -f $CONFIGDIR/bash_profile-$ARCH ]; then
@@ -35,9 +39,9 @@ fi
 # make the command line history ignore duplicate command lines.
 history_control=ignoredups
 
-# -----------------------------
+# -----------------------------------------------------------------------------
 # Establish a safe environment.
-# -----------------------------
+# -----------------------------------------------------------------------------
 # Do not log out with <ctrl-d>
 set -o ignoreeof
 # Do not overwrite files via '>'
