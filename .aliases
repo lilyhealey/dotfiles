@@ -2,6 +2,8 @@
 # establish a safe computing environment
 # -----------------------------------------------------------------------------
 
+ignored={"Icon?",".DS_Store"}
+
 # prompt before removing files via rm
 alias rm="rm -i"
 # prompt before overwriting files via cp
@@ -25,7 +27,7 @@ if [ -x /usr/local/bin/gdircolors ]; then
     #                   'always' (default if omitted), 
     #                   'auto', or 
     #                   'never'
-    alias ls='gls -a --color=auto --quoting-style=literal'
+    alias ls="gls -a --color=auto --quoting-style=literal --ignore=$ignored"
     alias dir='gdir --color=auto'
     alias vdir='gvdir --color=auto'
 
@@ -82,7 +84,13 @@ alias emacs="emacs -nw"
 # alias date="date +'%a, %d %b %Y %T %Z' | perl -ne 'print lc'"
 alias date="gdate -R"
 
+# K4XML script
 alias k4="/usr/bin/env osascript /Users/$USER/Dropbox/work/the-new-yorker/github/tny-automation-scripts/K4XML/K4_XML_CC14.applescript"
+
+# validate an XML file
+alias validate="/usr/bin/xmllint --schema /Users/$USER/Dropbox/work/the-new-yorker/github/tny-automation-scripts/XML\ Scripts/tny-schema.xsd --noout"
+
+# mount TNY servers
 alias mnt="/Users/$USER/Library/LaunchAgents/mount-servers.js"
 
 # quick look a file

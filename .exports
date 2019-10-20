@@ -29,6 +29,3 @@ export GPG_TTY=$(tty);
 
 # see the very end of man jq for details
 export JQ_COLORS="1;30:1;35:1;35:1;33:1;32:1;36:1;36"
-
-# export NVM_DIR="$HOME/.nvm"
-#   . "/usr/local/opt/nvm/nvm.sh"
