@@ -1,5 +1,6 @@
-# set the PATH environment variable
+#!/usr/bin/env bash
 
+# set the PATH environment variable
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/mysql/support-files:$PATH"
 export PATH="/usr/local/mysql/bin:$PATH"

@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # no vi ever please
 export EDITOR=emacs;
 
